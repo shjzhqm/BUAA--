@@ -36,7 +36,7 @@ void init(){
         if(NonDigit(i)) st[i] = 1, signal[i] = 1, digit[i] = 3, deng[i] = dengDeng[i] = pt[i] = 3;
         if(isDigit(i)) st[i] = 2, digit[i] = 2, signal[i] = 1, deng[i] = dengDeng[i] = pt[i] = 3;
         if(Err(i)) st[i] = signal[i] = digit[i] = deng[i] = dengDeng[i] = pt[i] = 4;
-        if(isSignal(i) && i != '=') digit[i] = signal[i] = deng[i] = dengDeng[i] = 3, st[i] = 7;
+        if(isSignal(i) && i != '=') digit[i] = signal[i] = deng[i] = dengDeng[i] = 3, st[i] = 7, pt[i] = 3;
         if(isBrace(i)) st[i] = signal[i] = digit[i] = deng[i] = dengDeng[i] = pt[i] = 3;
         if(i == '=') st[i] = 5, digit[i] = signal[i] = 3, deng[i] = 6, dengDeng[i] = pt[i] =  3;
     }
