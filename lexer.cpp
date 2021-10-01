@@ -20,7 +20,7 @@ bool isBrace(char x){return x == ' ' || x == '\n' || x == '\t';}
 
 bool Err(char x){return !isSignal(x) && !NonDigit(x) && !isDigit(x) && !isBrace(x);}
 
-vector<unordered_map<char, int>> ccc;
+vector<unordered_map<char, int> > ccc;
 
 unordered_map<string, string> gjz;
 
@@ -85,7 +85,8 @@ void solve(){
     if(s != "") print(s);
 }
 
-int main(){
+int main(int argc, char **argv){
+    if(argc == 2) freopen(argv[1], "r", stdin);
     init();
     solve();
 }
